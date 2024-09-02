@@ -1,13 +1,14 @@
 import React from "react";
 
 function YourBotArmy() {
-  //your bot army code here...
+  // Component to display the user's bot army
 
   return (
     <div className="ui segment inverted olive bot-army">
+      {/* Container for the bot army section with styling */}
       <div className="ui five column grid">
         <div className="row bot-army-row">
-          {/*...and here...*/}
+          {/* Row to display the bot army */}
           Your Bot Army
         </div>
       </div>
