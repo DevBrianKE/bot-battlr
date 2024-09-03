@@ -1,76 +1,23 @@
 import React from "react";
 
-const botTypeClasses = {
-  Assault: "icon military",
-  Defender: "icon shield",
-  Support: "icon plus circle",
-  Medic: "icon ambulance",
-  Witch: "icon magic",
-  Captain: "icon star",
-};
-
-function BotSpecs({ bot }) {
+function BotSpecs({ bot, onGoBack, onEnlist }) {
   return (
     <div className="ui segment">
-      <div className="ui two column centered grid">
-        <div className="row">
-          <div className="four wide column">
-            <img
-              alt="oh no!"
-              className="ui medium circular image bordered"
-              src={bot.avatar_url}
-            />
-          </div>
-          <div className="four wide column">
-            <h2>Name: {bot.name}</h2>
-            <p>
-              <strong>Catchphrase: </strong>
-              {bot.catchphrase}
-            </p>
-            <strong>
-              Class: {bot.bot_class}
-              <i className={botTypeClasses[bot.bot_class]} />
-            </strong>
-            <br />
-            <div className="ui segment">
-              <div className="ui three column centered grid">
-                <div className="row">
-                  <div className="column">
-                    <i className="icon large circular red heartbeat" />
-                    <strong>{bot.health}</strong>
-                  </div>
-                  <div className="column">
-                    <i className="icon large circular yellow lightning" />
-                    <strong>{bot.damage}</strong>
-                  </div>
-                  <div className="column">
-                    <i className="icon large circular blue shield" />
-                    <strong>{bot.armor}</strong>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <button
-              className="ui button fluid"
-              onClick={() =>
-                console.log("connect this to a function that shows all bots")
-              }
-            >
-              Go Back
-            </button>
-            <button
-              className="ui button fluid"
-              onClick={() =>
-                console.log(
-                  "connect this to a function that adds this bot to your bot army list"
-                )
-              }
-            >
-              Enlist
-            </button>
-          </div>
+      <h2>{bot.name}</h2>
+      <div className="ui grid">
+        <div className="eight wide column">
+          <img src={bot.avatar_url} alt={bot.name} />
+        </div>
+        <div className="eight wide column">
+          <p><strong>Health:</strong> {bot.health}</p>
+          <p><strong>Damage:</strong> {bot.damage}</p>
+          <p><strong>Armor:</strong> {bot.armor}</p>
+          <p><strong>Class:</strong> {bot.bot_class}</p>
+          <p><strong>Catchphrase:</strong> {bot.catchphrase}</p>
         </div>
       </div>
+      <button className="ui button" onClick={onGoBack}>Go Back</button>
+      <button className="ui button" onClick={() => onEnlist(bot)}>Enlist</button>
     </div>
   );
 }
