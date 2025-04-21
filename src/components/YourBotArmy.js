@@ -40,3 +40,4 @@ function YourBotArmy({ bots, onRemoveBot, onDischargeBot }) {
 }
 
 export default YourBotArmy;
+

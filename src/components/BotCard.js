@@ -43,3 +43,4 @@ function BotCard({ bot, onAddBot, onViewBot, isInArmy, onToggleSelection }) {
 }
 
 export default BotCard;
+

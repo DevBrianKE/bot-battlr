@@ -23,3 +23,4 @@ function BotSpecs({ bot, onGoBack, onEnlist }) {
 }
 
 export default BotSpecs;
+

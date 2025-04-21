@@ -11,3 +11,4 @@ function SortBar({ onSort }) {
 }
 
 export default SortBar;
+

@@ -24,3 +24,4 @@ function FilterBar({ selectedClasses, onFilterChange }) {
 }
 
 export default FilterBar;
+

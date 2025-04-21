@@ -32,3 +32,4 @@ function BotCollection({ bots, onAddBot, onViewBot, selectedBots, onToggleSelect
 }
 
 export default BotCollection;
+
